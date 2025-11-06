@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #e0e5ec 0%, #c9d6e8 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #1d1d1f;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #f5f5f7;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* macOS Window Chrome */
+header {
+    background: linear-gradient(180deg, #e8e8e8 0%, #d5d5d5 100%);
+    padding: 12px 20px 20px 20px;
+    border-bottom: 1px solid #b8b8b8;
+    position: relative;
+}
+
+/* macOS Traffic Light Buttons */
+header::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    background: #ff5f57;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 0 1px rgba(0, 0, 0, 0.1),
+        20px 0 0 0 #ffbd2e,
+        20px 0 0 1px rgba(0, 0, 0, 0.1),
+        40px 0 0 0 #28ca42,
+        40px 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2em;
+    color: #1d1d1f;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    color: #6e6e73;
+    font-size: 0.95em;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Content Area */
+.container > div:not(header):not(footer) {
+    padding: 0 30px;
+}
+
+.container > footer {
+    padding: 0 30px 20px 30px;
+}
+
+.info-section {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    flex: 1;
+    background: white;
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid #d2d2d7;
+    min-width: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.info-box h3 {
+    color: #1d1d1f;
+    margin-bottom: 8px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.info-box p {
+    color: #6e6e73;
+    line-height: 1.5;
+    font-size: 0.9em;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: white;
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid #d2d2d7;
+    min-width: 150px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-label {
+    color: #6e6e73;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.stat-value {
+    color: #007aff;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.difficulty-controls,
+.action-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.difficulty-controls label {
+    font-weight: 500;
+    color: #1d1d1f;
+    font-size: 0.95em;
+}
+
+#difficulty {
+    padding: 8px 12px;
+    border: 1px solid #d2d2d7;
+    border-radius: 6px;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex: 1;
+    min-width: 150px;
+    background: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+}
+
+#difficulty:hover {
+    border-color: #007aff;
+}
+
+#difficulty:focus {
+    outline: none;
+    border-color: #007aff;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+.btn {
+    padding: 8px 18px;
+    border: 1px solid #d2d2d7;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    letter-spacing: -0.2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary {
+    background: #007aff;
+    color: white;
+    border-color: #007aff;
+}
+
+.btn-primary:hover {
+    background: #0051d5;
+    border-color: #0051d5;
+}
+
+.btn-success {
+    background: #34c759;
+    color: white;
+    border-color: #34c759;
+}
+
+.btn-success:hover {
+    background: #2da948;
+    border-color: #2da948;
+}
+
+.btn-warning {
+    background: #ff9500;
+    color: white;
+    border-color: #ff9500;
+}
+
+.btn-warning:hover {
+    background: #e07e00;
+    border-color: #e07e00;
+}
+
+.btn-secondary {
+    background: #8e8e93;
+    color: white;
+    border-color: #8e8e93;
+}
+
+.btn-secondary:hover {
+    background: #6e6e73;
+    border-color: #6e6e73;
+}
+
+.sudoku-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 0;
+    border: 2px solid #1d1d1f;
+    background: #1d1d1f;
+    width: fit-content;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cell {
+    width: 45px;
+    height: 45px;
+    border: 0.5px solid #c6c6c8;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 500;
+    background: white;
+    transition: all 0.15s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+}
+
+.cell:focus {
+    outline: none;
+    background: #d6ebff;
+    border: 1.5px solid #007aff;
+    z-index: 10;
+}
+
+.cell:hover:not(:disabled) {
+    background: #f5f5f7;
+}
+
+/* Bold borders for 3x3 boxes */
+.cell:nth-child(3n) {
+    border-right: 2px solid #1d1d1f;
+}
+
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid #1d1d1f;
+}
+
+.cell.given {
+    background: #e8f4fd;
+    color: #1d1d1f;
+    font-weight: 600;
+}
+
+.cell.solved {
+    background: #d4f4dd;
+    color: #1d8348;
+    font-weight: 600;
+}
+
+.cell.invalid {
+    background: #ffeaea;
+    color: #d0021b;
+}
+
+.cell:disabled {
+    cursor: not-allowed;
+}
+
+.instructions {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #d2d2d7;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.instructions h3 {
+    color: #1d1d1f;
+    margin-bottom: 12px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.instructions ul {
+    list-style-position: inside;
+    color: #6e6e73;
+    line-height: 1.7;
+}
+
+.instructions li {
+    margin-bottom: 6px;
+    font-size: 0.9em;
+}
+
+footer {
+    text-align: center;
+    color: #86868b;
+    font-size: 0.85em;
+    padding-top: 15px;
+    border-top: 1px solid #d2d2d7;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .subtitle {
+        font-size: 0.85em;
+    }
+
+    .container > div:not(header):not(footer) {
+        padding: 0 20px;
+    }
+
+    .container > footer {
+        padding: 0 20px 15px 20px;
+    }
+
+    .cell {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+
+    .info-section {
+        flex-direction: column;
+    }
+
+    .btn {
+        padding: 7px 14px;
+        font-size: 0.85em;
+    }
+}
+
+/* Loading Animation - macOS Style */
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(245, 245, 247, 0.98);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 8px;
+}
+
+.loading-overlay.active {
+    display: flex;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #e5e5e7;
+    border-top: 4px solid #007aff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-overlay p {
+    color: #1d1d1f;
+    font-size: 1em;
+    font-weight: 500;
+}
