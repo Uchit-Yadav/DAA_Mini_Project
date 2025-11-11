@@ -136,8 +136,7 @@ This project is open source and available for educational purposes.
 
 ## 👨‍💻 Author
 
-Created as part of DAA (Design and Analysis of Algorithms) Final Project
-Made By:
+Created as part of DAA (Design and Analysis of Algorithms) Final Project By:
 - Ayush Kumar Dheeraj (23BCS10465)
 - Piyush Singh (23BCS13623)
 - Uchit Yadav (23BCS10465)
